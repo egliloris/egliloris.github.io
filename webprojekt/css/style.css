@@ -1,0 +1,764 @@
+/* Willkommen im CSS-Code File*/
+
+/*
+*
+ALLGEMEINES
+*
+*/
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
+	font-size: 13px;
+	text-decoration: none;
+}
+html{
+	max-width: 2000px;
+}
+body, html{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+body{
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #8C195F;
+}
+a:hover{
+	color: #D72864;
+}
+
+/*
+*
+HEADER
+*
+*/
+
+header{
+	justify-content: center;
+	width: 100%;
+	height: 100px;
+	display: flex;
+	text-align: center;
+	position: fixed;
+	background: #fff;
+	z-index: 5;
+	flex-shrink: 0;
+	box-shadow: 0px 0px 2px 2px rgb(0 0 0 / 10%);
+	max-width: 2000px;
+}
+header > div{
+	margin-top: auto;
+	margin-bottom: auto;
+}
+header .icon_nav{
+	margin-left: 120px;
+} 
+header .icon_ost{
+	margin-right: 120px;
+}
+header .seitentitel{
+	flex-grow: 1;
+}
+header .seitentitel h1{
+	font-size: 3.5em;
+	color: #8C195F;
+}
+header .seitentitel h2{
+	font-size: 2em;
+	color: #8C195F;
+}
+header .seitentitel_text{
+	display: flex;
+	justify-content: center;
+}
+
+/*
+*
+FOOTER
+*
+*/
+
+footer {
+	height: 200px;
+	padding-left: 120px;
+	padding-right: 120px;
+	margin-top: 15px;
+    background: #F2F2F2;
+	display: flex;	
+	flex-shrink: 0;
+}
+footer > div{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+footer > div h2{
+	font-size: 2.5em;
+	padding-bottom: 10px;
+}
+footer > div p{
+	font-size: 1.75em;
+}
+footer > div p a{
+	font-size: 1.2em;
+}
+footer >div p:last-child{
+	padding-top: 15px;
+}
+footer .impressum{
+	padding-top: 25px;
+}
+
+/*
+*
+HAMBURGER NAVIGATION
+*
+*/
+
+input#hamburg {
+	visibility: hidden;
+	display: none;
+}
+.line { 
+	height: 3px; 
+	width: 28px; 
+	display: flex; 
+	background-color: #191919;
+	margin: 7px;
+	transform-origin: 60%;
+	transition: 0.5s;
+}
+.line > span:first-child{
+	background-color: #D72864;
+	transition: 0.5s;
+}
+.line > span{
+	width: 25%;
+	background-color: #8C195F;
+}
+.hamburg:hover .hamburg:checked span:first-child{
+	width: 50%;
+	transition: 0.5s;
+}
+.hamburg{
+	display: block;
+}
+.hamburg:hover{
+	cursor: pointer;
+}
+#hamburg:checked + .hamburg .line:nth-child(1){
+   transform: translateY(12px) rotate(45deg);
+   transition: 0.5s;
+}
+#hamburg:checked + .hamburg .line:nth-child(2){
+   opacity:0;
+   transition: 0.5s;
+}
+#hamburg:checked + .hamburg .line:nth-child(3){
+   transform: translateY(-12px) rotate(-45deg);
+   transition: 0.5s;
+}
+
+#nav1{
+	visibility: hidden;
+	position: fixed;
+	background-color: white;
+	z-index: 5;
+	position: fixed;
+	margin-top: 120px;
+	margin-left: 120px;
+	margin-bottom: 5%;
+	height: calc(100vh - 140px);
+	width: 10px;
+	transition: width 1s;
+}
+#hamburg:checked + body #nav1{
+	width: 500px;
+	transition: width 0.6s;
+}
+#nav1 ul{
+	padding: 30px;
+}
+#nav1 ul .nav_title{
+	font-size: 4em;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+#nav_background{
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 4;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+#nav1 ul li a{
+	font-size: 3em;
+	font-weight: bold;
+
+}
+#nav1 ul li{
+	padding-top: 15px;
+}
+#nav1_text{
+	overflow: hidden;
+}
+.navi{
+	margin-left: -500px;
+	transition: margin-left 0.6s;
+	transition-delay: 0.2s;
+	overflow: hidden;
+}
+
+/*
+*
+Slide-Show
+*
+*/
+
+.content .slider{
+	width: 100%;
+	height: 500px;
+	padding: 0;
+	margin-top: 0;
+	position: relative;
+	box-shadow: none;
+}
+.slideshow-container {
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+}
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 2s;
+	animation-name: fade;
+	animation-duration: 2s;
+}
+@-webkit-keyframes fade {
+	from {opacity: 0.6} 
+	to {opacity: 1}
+}
+@keyframes fade {
+	from { opacity: 0.6;}
+	to {opacity: 1}
+}
+.mySlides {
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size:cover;
+}
+.mySlides:first-child{
+	display: block;
+}
+img {
+	vertical-align: middle;
+}
+.conentbox_big slider {
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+}
+.prev, .next {
+	position: relative;
+	cursor: pointer;
+	width: auto;
+	color: #8C195F;
+	font-weight: bold;
+	font-size: 25px;
+	transition: 1s ease;
+	user-select: none;
+	padding: 16px;
+	margin-top: -22px;
+}
+.next_pre{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+    align-items: center;
+	justify-content: space-between;
+}
+.prev{
+	border-radius: 0 3px 3px 0;
+}
+.next{
+	border-radius: 3px 0 0 3px;
+}
+.dot_switch{
+	position: absolute;
+	height: 100%;
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+    align-items: flex-end;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  margin-bottom: 10px;
+  background-color: #8C195F;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  position: relative;
+}
+.active, .dot:hover {
+  background-color: #D72864;
+}
+#slider1{
+	background-image: url(../images/slider/slider1.jpg);
+}
+#slider2{
+	background-image: url(../images/slider/slider2.jpg);
+}
+#slider3{
+	background-image: url(../images/slider/slider3.jpg);
+}
+
+/*
+*
+CONTENT
+©Loris Egli Ivan Birovljevic Marc Fäh
+*
+*/
+
+html{
+	height: 100%;
+}
+.content{
+	margin-top: 100px;
+	display: flex;
+	margin-right: 105px;
+	margin-left: 105px;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+.uebertitel{
+	height: 35px;
+}
+.content > div{
+	box-shadow: 2px 2px #e6e6e6;
+}
+.container_small{
+	width: calc(50% - 70px);
+	margin: 15px;
+	background-color: #f7f7f7;
+	padding: 20px;
+}
+.container_big{
+	width: calc(100% - 70px);
+	margin: 15px;
+	background-color: #f7f7f7;
+	padding: 20px;
+}
+.container_portrait{
+	width: calc(50% - 30px);
+	background-color: #f7f7f7;
+	margin: 15px;
+}
+.fillspace{
+	min-height: 0;
+	padding: 0;
+	margin: 0;
+	flex-grow: 1;
+	background-color: #fff;
+	box-shadow: none;
+}
+.titel h2{
+	font-size: 2.8em;
+	text-align: center;
+	color: #8C195F;
+}
+.text{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top: 1.8px solid #000;
+}
+.text h2{
+	font-size: 2.8em;
+	padding-bottom: 10px;
+}
+.text h3{
+	padding-top: 5px;
+	font-size: 1.9em;
+}
+.text p{
+	font-size: 1.9em;
+	padding: 10px;
+}
+.text ul{
+	padding-left: 20px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+.text ul li{
+	padding: 8px;
+}
+.text ul li a{
+	font-size: 1.7em;
+}
+.text ul li p{
+	padding: 0;
+}
+.low .icons{
+	height: 16px;
+	width: 16px;
+}
+.container_big .content_box{
+	flex-wrap: nowrap;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+.container_portrait .content_box{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+.container_big .content_box .left{
+	width: 20%;
+}
+.container_big .content_box .left img{
+	width: 90%;
+	max-width: 400px;
+}
+.container_portrait img{
+	width: 200px;
+}
+.container_big .content_box .right{
+	width: 80%;
+}
+.container_big h1{
+	font-size: 3em;
+	color: #8C195F;
+}
+.container_big .titel h2{
+	text-align: left;
+}
+.right .text{
+	flex-grow: 1;
+}
+.right{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+.low{
+	border-top: 1.8px solid #000;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+	display: flex;
+	flex-wrap: wrap;
+}
+#index .low{
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+#module .low{
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+.low a{
+	padding-right: 30px;
+	font-size: 1.6em;
+}
+#module a{
+	font-weight: bold;
+	border: 1.8px solid #8C195F;
+    border-radius: 18px;
+    padding: 7px 35px 5px 35px;
+    display: inline-block;
+}
+#module a:hover{
+	font-weight: bold;
+	color: #fff;
+	background-color: #D72864;
+	border: 1.8px solid #D72864;
+    border-radius: 18px;
+    padding: 7px 35px 5px 35px;
+    display: inline-block;
+}
+#module .low{
+	display: flex;
+	justify-content: center
+}
+.container_portrait .right{
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 50%;
+	flex-grow: 1;
+}
+.titel h3{
+    font-size: 1.8em;
+	text-align: center;
+}
+.titel{
+	padding-bottom: 15px;
+}
+.container_portrait .titel h2{
+    margin-bottom: 5px;
+}
+
+#links{
+	flex-direction: column;
+}
+#links .text{
+	border-top: none;
+}
+#anschrift{
+	border-top: none;
+}
+#anschrift h2{
+	color: #8C195F;
+}
+#impressum .text a{
+	font-size: 1em;
+}
+#standort .container_small .titel{
+	flex-grow: 1;
+}
+#standort .container_small{
+	display: flex;
+	flex-direction: column;
+}
+#lehrpersonen .left{
+	display: flex;
+	align-items: flex-end;
+}
+#impressum .left{
+	display: flex;
+	align-items: flex-end;
+}
+.container_small .titel{
+	padding-bottom: 20px;
+}
+.container_portrait .right{
+	padding-top: 15px;
+}
+.container_small .low{
+	padding-bottom: 0;
+}
+.content_box{
+	height: 100%;
+}
+#standort{
+	display: flex;
+}
+#index .text ul li a{
+	list-style-type: ;
+}
+
+/*
+*
+Media Screen / Responsive 
+*
+*/
+@media screen and (max-width: 1600px){
+	#lehrpersonen > .container_portrait {
+		width: 100%;
+	}
+
+}
+@media screen and (max-width:1100px){
+	.content{
+		display: block;
+		margin-right: 0;
+		margin-left: 0;
+	}
+	.content > div{
+		width: calc(100% - 40px);
+		margin-left: 0;
+		margin-right: 0;
+	}
+	#impressum > div{
+		width: auto;
+	}
+	#lehrpersonen .content > div{
+		width: 100%;
+	}
+	.container_portrait img {
+    width: 200px;
+	}
+	header .icon_nav{ 
+		margin-left: 20px;
+	}
+	header .icon_ost{
+		margin-right: 20px;
+	}
+	#lehrpersonen > .container_portrait{
+		width: 100%;
+	}
+	footer{
+		padding-left: 20px;
+		flex-direction: column;
+	}
+	footer > div{
+		width: auto;
+	}
+	#nav1{
+		width: 100%;
+		height: 100%;
+		margin-top: 100px;
+		margin-left: 0;
+	}
+	.container_portrait{
+		margin: 0;
+		margin-bottom: 15px;
+	}
+	.container_portrait .right{
+		width: 100%;
+	}
+	#lehrpersonen .left {
+		text-align: center;
+	}
+	#impressum .left{
+		   text-align: center;
+	}
+	#impressum .text{
+		padding-left: 15px;
+		padding-bottom: 15px;
+	}
+	#impressum .low{
+		padding-left: 15px;
+		margin-bottom: 0;
+	}
+	.container_portrait .right{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	#lehrpersonen .text{
+		margin-left: 20px;
+		margin-right: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	#lehrpersonen .low{
+		margin-left: 20px;
+		margin-right: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-bottom: 0;
+	}
+	.container_portrait .content_box{
+		align-items: flex-end;
+	}
+	.container_big .content_box .right{
+		width: 100%;
+	}
+	.container_big .content_box .left{
+		text-align: center;
+	}
+	.container_big .titel h2{
+		text-align: center;
+	}
+	#nav1{
+		width: 100%;
+	}
+	.content .slider{
+		height: 350px;
+	}
+	#lehrpersonen .left {
+		display: block;
+	}
+	#impressum .left{
+		display: block;
+	}
+	#slider3{
+	background-image: url(../images/slider/slider3_1500.jpg);
+	}
+}
+@media screen and (max-width:780px){
+	header .seitentitel h1 {
+		font-size: 3em;
+		color: #8C195F;
+	}
+}
+@media screen and (max-width:700px){
+	*{
+		font-size: 8px;
+	}
+	header img{
+		width: 100px;
+	}
+	.content .slider{
+	height: 200px;
+	}
+	#index .left img{
+		width: 100%;
+	}
+	.container_portrait .content_box{
+		display: block;
+		align-items: flex-end;
+	}
+	.container_big .content_box{
+		flex-direction: column;
+		align-items: center;
+	}
+	.container_big .content_box .left {
+    width: 30%;
+	}
+	.text {
+    border-top: 1.4px solid #000;
+	}
+	.low {
+    border-top: 1.4px solid #000;
+	}
+	#slider1{
+	background-image: url(../images/slider/slider1_700.jpg);
+	}
+	#slider2{
+		background-image: url(../images/slider/slider2_700.jpg);
+	}
+	#slider3{
+		background-image: url(../images/slider/slider3_700.jpg);
+	}
+}
+@media screen and (max-width:550px){
+	header .seitentitel a h1{
+		font-size: 2.3em;
+	}
+	header .seitentitel a h2{
+		font-size: 1.8em;
+	}
+	.content .slider{
+	height: 200px;
+	}
+	.container_big .content_box .left {
+    width: 40%;
+	}
+}
+
