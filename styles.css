@@ -1,0 +1,333 @@
+/*General*/
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border-style: none;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: #EDF5E1;
+}
+html {
+    background-color: #5CDB95;
+}
+ul{
+    list-style-type: none;
+}
+h1{
+    font-size: 4.4rem;
+    font-weight: 700;
+}
+h2{
+    font-size: 2.6rem;
+    font-weight: 600;
+}
+h3{
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+::-webkit-scrollbar {
+    color: #EDF5E1;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #EDF5E1;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #379683;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #2fb398;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-corner{
+    background-color: #5CDB95;
+}
+::-webkit-scrollbar-button{
+    background-size: cover;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+    background-image: url("logo/scroll/up.svg");
+  }
+  ::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    background-image: url("logo/scroll/up-active.svg");
+  }
+::-webkit-scrollbar-button:single-button:vertical:increment{
+    background-image: url("logo/scroll/down.svg");
+}
+::-webkit-scrollbar-button:single-button:vertical:increment:hover{
+    background-image: url("logo/scroll/down-active.svg");
+}
+
+::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    background-image: url("logo/scroll/left.svg");
+  }
+  ::-webkit-scrollbar-button:single-button:horizontal:decrement:hover {
+    background-image: url("logo/scroll/left-active.svg");
+  }
+::-webkit-scrollbar-button:single-button:horizontal:increment{
+    background-image: url("logo/scroll/right.svg");
+}
+::-webkit-scrollbar-button:single-button:horizontal:increment:hover{
+    background-image: url("logo/scroll/right-active.svg");
+}
+
+
+
+
+
+
+/*Body*/
+body{
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/*Header*/
+header{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.svg{
+    height: 50px;
+    width: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.about{
+    background-image: url("logo/svgAbout.svg");
+}
+.skills{
+    background-image: url("logo/svgSkills.svg");
+}
+.projects{
+    background-image: url("logo/svgProjects.svg");
+}
+.contact{
+    background-image: url("logo/svgContact.svg");
+}
+.more{
+    background-image: url("logo/svgmore.svg");
+}
+.csharp{
+    background-image: url("logo/csharp.svg");
+}
+.clanguage{
+    background-image: url("logo/c.svg");
+}
+.html{
+    background-image: url("logo/html.svg");
+}
+.css{
+    background-image: url("logo/css.svg");
+}
+.java{
+    background-image: url("logo/java.svg");
+}
+.php{
+    background-image: url("logo/php.svg");
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    justify-self: center;
+    align-items: center;
+    margin: 25px 0;
+    width: 100%;
+}
+.navigation li{
+    padding-left: 10px;
+    padding-right: 10px;
+    width: calc((100% - 188px) / 5);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.navigation li:first-child{
+    padding-left: 0;
+}
+.navigation li:last-child{
+    padding-right: 0;
+}
+.navigation li:hover{
+    background-color: #8EE4AF;
+    border-radius: 10px;
+}
+.navigation li a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.navigation li a div{
+    display: flex;
+    align-items: center;
+    color: #053742; 
+}
+.navigation li a div h1{
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #379683;
+}
+.navigation li a div svg{
+    margin-right: 5px;
+}
+.seperator{
+    width: 2px;
+    height: 80%;
+    background-color: #379683;
+    margin: 0 10px;
+}
+.skillslist .seperator{
+    margin: 0 10px;
+}
+.seperatorHorizontal{
+    height: 2px;
+    width: 60%;
+    background-color: #379683;
+    margin: 50px auto;
+    
+}
+
+/*Main*/
+main{
+    display: flex;
+    flex-direction: column;
+}
+main div{
+    display: flex;
+    flex-direction: column;
+}
+main span{
+    margin-right: 20px;
+}
+main h1{
+    font-size: 2.1rem;
+}
+main div .title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+}
+main div .text{
+    padding-left: 20px;
+    padding-right: 30px;
+}
+main div .text ul{
+    display: flex;
+    flex-direction: row;
+}
+main div .text ul li a div{
+    display: flex;
+    flex-direction: row;
+}
+.skillslist{
+    align-items: center;
+    flex-wrap: wrap;
+}
+.skillslist ul{
+    width: 100%;
+    justify-content: center;
+    height: 60px;
+    align-items: center;
+}
+.skillslist ul:first-child{
+    margin-bottom: 20px;
+}
+.skillslist ul li{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+.skillslist ul li:hover{
+    background-color: #8EE4AF;
+    border-radius: 10px;
+}
+.skillslist ul li a{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.skillslist ul li a div{
+    padding: 5px;
+}
+.skillslist span{
+    margin: 0;
+}
+.skillsTitle{
+    margin-left: 20px;
+}
+#welcome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#welcome h1{
+    line-height: 90%;
+    font-size: 4rem;
+}
+#welcome h2{
+    line-height: 95%;
+}
+.underline{
+    text-decoration: underline;
+}
+
+
+.projectContainer{
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
+.projectLink{
+    display: flex;
+    text-align: center;
+    height: 200px;
+    width: 80%;
+    align-items: center;
+    
+}
+.projectLink:hover{
+    background-color: #8EE4AF;
+    border-radius: 10px;
+}
+.svgOst{
+    height: 100%;
+    width: 200px;
+    background-image: url("webprojekt/images/logo-ost.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-right: 30px;
+    margin-left: 20px;
+}
+
+/*Footer*/
+footer{
+height: 100px;
+}
+
+@media screen and (max-width:1000px){
+    .headerTitle, .skillsTitle{
+        display: none;
+    }
+}
+
+@media screen and (max-width:900px){
+    .svgOst{
+        display: none;
+    }
+    .projectLink{
+        justify-content: center;
+    }
+}
