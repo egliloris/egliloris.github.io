@@ -1,0 +1,359 @@
+/*****************************************************************
+* 0. Color-Variables
+*****************************************************************/
+:root{
+    --color_Icons: #46a592;
+    --color_Text: #000;
+    --color_Background: #e3f1ff;
+    --color_Highlighted: #f2ffff;
+}
+
+/*****************************************************************
+* 1. General CSS
+*****************************************************************/
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border-style: none;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+html {
+    background-color: var(--color_Background);
+}
+body{
+    max-width: 1000px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%;
+    margin: 0 auto;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    color: var(--color_Highlighted);
+}
+h1{
+    font-size: 4.4rem;
+    font-weight: 700;
+    color: var(--color_Text);
+}
+h2{
+    font-size: 2.6rem;
+    font-weight: 600;
+    color: var(--color_Text);
+}
+h3{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--color_Text);
+}
+
+/*****************************************************************
+* 2. Header
+*****************************************************************/
+header{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.svg{
+    height: 50px;
+    width: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: red;
+}
+svg {
+    color : var(--color_Icons) !important;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    justify-self: center;
+    align-items: center;
+    margin: 25px 0;
+    width: 100%;
+}
+.navigation li{
+    padding-left: 10px;
+    padding-right: 10px; 
+    width: calc((100% - 188px) / 5);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.navigation li:hover{
+    background-color: var(--color_Highlighted);
+    border-radius: 10px;
+}
+.navigation li a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.navigation li a div{
+    display: flex;
+    align-items: center;
+    color: #053742; 
+}
+.navigation li a div h1{
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.navigation li a div svg{
+    margin-right: 5px;
+}
+.seperator{
+    width: 2px;
+    height: 80%;
+    background-color: var(--color_Icons);
+    margin: 0 10px;
+}
+span{
+    user-select: none;
+}
+object {
+    user-select: none;
+}
+
+.skillslist .seperator{
+    margin: 0 10px;
+}
+.seperatorHorizontal{
+    height: 2px;
+    width: 60%;
+    background-color: var(--color_Icons);
+    margin: 50px auto;
+
+}
+
+/*****************************************************************
+* 3. Main
+*****************************************************************/
+main{
+    display: flex;
+    flex-direction: column;
+}
+main div{
+    display: flex;
+    flex-direction: column;
+}
+main span{
+    margin-right: 20px;
+}
+main h1{
+    font-size: 2.1rem;
+}
+main div .title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+}
+main div .text{
+    padding-left: 20px;
+    padding-right: 30px;
+}
+main div .text ul{
+    display: flex;
+    flex-direction: row;
+}
+main div .text ul li a div{
+    display: flex;
+    flex-direction: row;
+}
+.skillslist{
+    align-items: center;
+    flex-wrap: wrap;
+}
+.skillslist ul{
+    width: 100%;
+    justify-content: center;
+    height: 60px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.skillslist ul:last-child{
+    margin-bottom: 0px;
+}
+.skillslist ul li{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+.skillslist ul li:hover{
+    background-color: var(--color_Highlighted);
+    border-radius: 10px;
+}
+.skillslist ul li a{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.skillslist ul li a div{
+    padding: 5px;
+}
+.skillslist span{
+    margin: 0;
+}
+.skillsTitle{
+    margin-left: 20px;
+}
+#welcome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#welcome h1{
+    line-height: 90%;
+    font-size: 4rem;
+}
+#welcome h2{
+    line-height: 95%;
+}
+.underline{
+    text-decoration: underline;
+    color: var(--color_Text);
+}
+.projectContainer{
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.projectContainer:last-child{
+    margin-bottom: 0px;
+}
+.projectLink{
+    display: flex;
+    text-align: center;
+    height: 200px;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    border-left: 2px solid var(--color_Icons);
+    border-right: 2px solid var(--color_Icons);
+}
+.projectLink:hover{
+    background-color: var(--color_Highlighted);
+    
+}
+.svgOst{
+    height: 100%;
+    width: 200px;
+    background-position: center;
+    margin-right: 30px;
+    margin-left: 20px;
+}
+
+
+/*****************************************************************
+* 4. Footer
+*****************************************************************/
+footer{
+    height: 100px;
+}
+
+
+/*****************************************************************
+* 5. Settings-Tab
+*****************************************************************/
+#settings {
+    left: -10px;
+    top: -100%;
+    transition: top 0.3s ease-in-out;
+    user-select: none;
+}
+  
+.open {
+    top: 0 !important;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(114, 114, 114, 0.4);
+    position: fixed;
+}
+  
+#inner_settings{
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+    padding: 50px;
+    background-color: rgba(26, 24, 24, 1);
+}
+#inner_settings label{
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: max-content;
+}
+#inner_settings label h4{
+    padding-right: 10px;
+    color: white;
+}
+ .toggle {
+    position : relative ;
+    display : inline-block;
+    width :60px !important;
+    height : 30px !important;
+    padding: 0 !important;
+    background-color: #ccc;
+    border-radius: 30px;
+    border: 2px solid rgb(80, 80, 80);
+}
+.toggle:after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    left: 3px;
+    transition: left 0.5s;
+}
+.checkbox:checked + .toggle::after {
+    left : calc(60px - 30px - 1px)
+}
+.checkbox:checked + .toggle {
+    background-color: #2196F3;
+}
+.checkbox {
+    display : none;
+}
+#ver2, #reset{
+    color: #fff;
+}
+
+/*****************************************************************
+* 6. Media Queries
+*****************************************************************/
+
+@media screen and (max-width:1000px){
+    .headerTitle, .skillsTitle{
+        display: none;
+    }
+}
+
+@media screen and (max-width:900px){
+    .svgOst{
+        display: none;
+    }
+    .projectLink{
+        justify-content: center;
+    }
+}

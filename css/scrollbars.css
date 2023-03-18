@@ -1,0 +1,51 @@
+
+::-webkit-scrollbar {
+    color: var(--color_Text);
+}
+
+::-webkit-scrollbar-track {
+    background-color: #52B69A;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #379683;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #2fb398;
+    opacity: 1;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-corner{
+    background-color: #5CDB95;
+}
+::-webkit-scrollbar-button{
+    background-size: cover;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+    background-image: url("scroll/up.svg");
+  }
+  ::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    background-image: url("scroll/up-active.svg");
+  }
+::-webkit-scrollbar-button:single-button:vertical:increment{
+    background-image: url("scroll/down.svg");
+}
+::-webkit-scrollbar-button:single-button:vertical:increment:hover{
+    background-image: url("scroll/down-active.svg");
+}
+
+::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    background-image: url("scroll/left.svg");
+  }
+  ::-webkit-scrollbar-button:single-button:horizontal:decrement:hover {
+    background-image: url("scroll/left-active.svg");
+  }
+::-webkit-scrollbar-button:single-button:horizontal:increment{
+    background-image: url("logo/scroll/right.svg");
+}
+::-webkit-scrollbar-button:single-button:horizontal:increment:hover{
+    background-image: url("scroll/right-active.svg");
+}
