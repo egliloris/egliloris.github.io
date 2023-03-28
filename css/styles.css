@@ -357,3 +357,10 @@ footer{
         justify-content: center;
     }
 }
+
+
+
+/* additional changes :) */
+.invisible{
+    display: none;
+}
