@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
     <head>
         <link rel="stylesheet" href="css/styles.css">
         <meta charset="UTF-8">
@@ -31,7 +31,8 @@
                                 <circle cx="12" cy="7" r="4" />
                                 <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
                             </svg>
-                            <h1 class="headerTitle">About</h1>
+                            <h1 class="headerTitle language_en">About</h1>
+                            <h1 class="headerTitle language_de">Über</h1>
                         </div>
                     </a>
                 </li>
@@ -62,7 +63,8 @@
                                 <line x1="9" y1="16" x2="9.01" y2="16" />
                                 <line x1="13" y1="16" x2="15" y2="16" />
                             </svg>
-                            <h1 class="headerTitle">Projects</h1>
+                            <h1 class="headerTitle language_en">Projects</h1>
+                            <h1 class="headerTitle language_de">Projekte</h1>
                         </div>
                     </a>
                 </li>
@@ -75,7 +77,8 @@
                                 <rect x="3" y="5" width="18" height="14" rx="2" />
                                 <polyline points="3 7 12 13 21 7" />
                             </svg>
-                            <h1 class="headerTitle">Contact</h1>                            
+                            <h1 class="headerTitle language_en">Contact</h1>           
+                            <h1 class="headerTitle language_de">Kontakt</h1>                  
                         </div>
                     </a>
                 </li>
@@ -87,7 +90,8 @@
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                 <path d="M4 6a2 2 0 0 1 2 -2m3 0h1.5m3 0h1.5m3 0a2 2 0 0 1 2 2m0 3v1.5m0 3v1.5m0 3a2 2 0 0 1 -2 2m-3 0h-1.5m-3 0h-1.5m-3 0a2 2 0 0 1 -2 -2m0 -3v-1.5m0 -3v-1.5m0 -3" />
                               </svg>
-                            <h1 class="headerTitle">More</h1>                            
+                            <h1 class="headerTitle language_en">More</h1>       
+                            <h1 class="headerTitle language_de">Mehr</h1>                     
                         </div>
                     </a>
                 </li>
@@ -96,8 +100,9 @@
         <main>
             <div id="welcome">
                 <h2>HEY!</h2>
-                <h3>you might know me as</h3>
-                <h1>Loris</h1>
+                <h3 class="language_en">you might know me as</h3>
+                <h3  class="language_de">vielleicht kennst du mich als</h3>
+                <h1>Loris Egli</h1>
                 <div>
                     <h1 class="invisible">Loris Egli ist ein begabter Informatiker, der aktuell am BWZ in Rapperswil seine Ausbildung abschliesst. Loris Egli beherrscht verschiedenste moderne Technologien wie C#, Java oder kennt sich auch mit Web5, den aktuellen Webseiten-standards aus. </h1>
                 </div>
@@ -112,10 +117,12 @@
                             <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
                         </svg>
                     </span>
-                    <h1>About Me</h1>
+                    <h1 class="language_en">About Me</h1>
+                    <h1 class="language_de">Über mich</h1>
                 </div>
                 <div class="text">
-                    <h3>I am a swiss student at an IT school. I am training to become a computer scientist in application development.</h3>
+                    <h3 class="language_en">I am currently in training as a computer scientist in application development at the Informatikmittelschule in Rapperswil, Switzerland.<br>Here I have the opportunity to get to know many different areas of computer science, while I complete the vocational baccalaureate.</h3>
+                    <h3 class="language_de">Ich bin aktuell in der Ausbildung als Informatiker in Applikations-Entwickler an der Informatikmittelschule in Rapperswil, Schweiz.<br>Hierbei habe ich die Möglichkeit viele verschiedenste Bereiche der Informatik kennenzulernen, während dem ich die Berufsmaturität absolviere.</h3>
                 </div>
             </div>
 
@@ -216,17 +223,20 @@
                             <line x1="13" y1="16" x2="15" y2="16" />
                         </svg>
                     </span>
-                    <h1>Projects</h1>
+                    <h1 class="language_en">Projects</h1>
+                    <h1 class="language_de">Projekte</h1>
                 </div>
                 <div class="projectContainer">
                     <a href="webprojekt/index.html" class="projectLink">
                         <img src="webprojekt/images/logo-ost.svg" alt="onlycanvas" class="left svgOst">
-                        <h2>Webproject UKZR</h2>
+                        <h2 class="language_en">Webproject UKZR</h2>
+                        <h2 class="language_de">Webseite UKZR</h2>
                     </a>
                 </div>
                 <div class="projectContainer">
                     <a href="canvas/index.html" class="projectLink">
-                        <h2>Only-Canvas Project</h2>
+                        <h2 class="language_en">Only-Canvas Project</h2>
+                        <h2 class="language_de">Projekt "Nur Canvas"</h2>
                     </a>
                 </div>
             </div>
@@ -241,7 +251,8 @@
                             <polyline points="3 7 12 13 21 7" />
                         </svg>
                     </span>
-                    <h1>Contact</h1>
+                    <h1 class="language_en">Contact</h1>
+                    <h1 class="language_de">Kontakt</h1>
                 </div>
                 <div class="text">
                     <h3>Loris Egli</h3>
@@ -253,24 +264,55 @@
         <div id="settings">
             <div id="inner_settings">
                 <label>
-                    <h4>Background Color: </h4> <input type="color" id="bg-color"  value="#e3f1ff">
+                    <h4 class="language_en">Background Color: </h4>
+                    <h4 class="language_de">Hintergrundfarbe: </h4>  
+                    <input type="color" id="bg-color"  value="#e3f1ff">
                 </label>
                 <label>
-                    <h4>Text Color: </h4> 
+                    <h4 class="language_en">Text Color: </h4> 
+                    <h4 class="language_de">Textfarbe: </h4> 
                     <input type="color" id="text-color" value="#000000">
                 </label>
                 <label>
-                    <h4>Icon Color: </h4>
+                    <h4 class="language_en">Icon Color: </h4>
+                    <h4 class="language_de">Symbolfarbe: </h4>
                     <input type="color" id="accent-color" value="#46a592">
                 </label>
                 <label>
-                    <h4>Custom Scrollbar: </h4>
+                    <h4 class="language_en">Custom Scrollbar: </h4>
+                    <h4 class="language_de">Angepasste Scrollbar: </h4>
                     <input type="checkbox" id="switch" class="checkbox" />
                     <label for="switch" class="toggle">
                     </label>
                 </label>
-                <a id="ver2">>> current Version</a>
-                <a id="reset">>> old Version</a>
+                <br>
+                <label>
+                    <h4 class="language_en">Language: </h4>
+                    <h4 class="language_de">Sprache: </h4>
+                    <div id="language_switcher_DE" class="language_selector">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 5 3">
+                            <rect id="black_stripe" width="5" height="3" y="0" x="0" fill="#000"/>
+                            <rect id="red_stripe" width="5" height="2" y="1" x="0" fill="#D00"/>
+                            <rect id="gold_stripe" width="5" height="1" y="2" x="0" fill="#FFCE00"/>
+                        </svg>
+                    </div>
+                    <div id="language_switcher_EN" class="language_selector">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 30" width="1000" height="600">
+                            <clipPath id="t">
+                                <path d="M25,15h25v15zv15h-25zh-25v-15zv-15h25z"/>
+                            </clipPath>
+                            <path d="M0,0v30h50v-30z" fill="#012169"/>
+                            <path d="M0,0 50,30M50,0 0,30" stroke="#fff" stroke-width="6"/>
+                            <path d="M0,0 50,30M50,0 0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/>
+                            <path d="M-1 11h22v-12h8v12h22v8h-22v12h-8v-12h-22z" fill="#C8102E" stroke="#FFF" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </label>
+                <br>
+                <a id="ver2" class="language_en">>> current design</a>
+                <a id="ver2_de" class="language_de">>> aktuelles Design</a>
+                <a id="reset" class="language_en">>> old design</a>
+                <a id="reset_de" class="language_de">>> altes Design</a>
             </div>
         </div>
           

@@ -301,6 +301,7 @@ footer{
     padding-top: 10px;
     padding-bottom: 10px;
     width: max-content;
+    align-items: center;
 }
 #inner_settings label h4{
     padding-right: 10px;
@@ -335,9 +336,20 @@ footer{
 .checkbox {
     display : none;
 }
-#ver2, #reset{
+#ver2, #reset, #ver2_de, #reset_de{
     color: #fff;
 }
+
+.language_selector{
+    height: 30px;
+    width: 70px;
+    display: flex;
+}
+.language_selector svg{
+    height: 100%;
+    width: 100%;
+}
+
 
 /*****************************************************************
 * 6. Media Queries
