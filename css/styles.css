@@ -357,7 +357,7 @@ footer{
 
 @media screen and (max-width:1000px){
     .headerTitle, .skillsTitle{
-        display: none;
+        display: none !important;;
     }
 }
 
@@ -371,9 +371,6 @@ footer{
 }
 
 @media screen and (max-width:800px){
-    .headerTitle{
-        display: none !important;
-    }
     header{
         margin-bottom: 0;
     }
@@ -382,6 +379,14 @@ footer{
     }
     h2 {
         font-size: 2rem;
+    }
+}
+@media screen and (max-width:410px){
+    #name{
+        font-size: 3em !important;
+    }
+    h3 {
+        font-size: 1.1em;
     }
 }
     
