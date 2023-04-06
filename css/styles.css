@@ -370,6 +370,25 @@ footer{
     }
 }
 
+@media screen and (max-width:800px){
+    .headerTitle{
+        display: none !important;
+    }
+    header{
+        margin-bottom: 0;
+    }
+    h3 {
+        font-size: 1.2em
+    }
+    h2 {
+        font-size: 2rem;
+    }
+}
+    
+
+
+
+
 
 
 /* additional changes :) */
