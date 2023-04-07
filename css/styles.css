@@ -961,6 +961,66 @@ footer{
     .headerTitle, .skillsTitle{
         display: none !important;;
     }
+
+
+    /*Projekte*/
+    #projectsCardContainer{
+        height: calc((100vw / 3) * 1.6);
+    }
+
+    .card{
+        width: calc(100vw / 3);
+        height: calc((100vw / 3) * 1.6);
+    }
+
+    #clickableCard{
+        width: calc(100vw / 3);
+        height: calc((100vw / 3) * 1.6);
+        left: calc((100vw / 2) - (100vw / 3 / 2));
+    }
+
+    .left{
+        left: 0;
+    }
+
+    .middle{
+        left: calc((100vw / 2) - (100vw / 3 / 2));
+    }
+
+    .right{
+        left: calc(100vw / 3 * 2);
+    }
+
+    #cardprevious{
+        margin: 30px;
+    }
+    #cardnext{
+        margin: 20px;
+    }
+
+    .middleText > h1{
+        font-size: 1.8em;
+    }
+    .middleText > span{
+        top: 40px;
+        margin-top: 0;
+    }
+    .middleText > h3{
+        font-size: 1.5em;
+        top: 50px;
+    }
+
+    .cardText > h1{
+        font-size: 1.8em;
+    }
+    .cardText > h3{
+        font-size: 1.5em;
+    }
+
+    .cardText{
+        max-width: 200px;
+    }
+
 }
 
 @media screen and (max-width:900px){
@@ -981,6 +1041,36 @@ footer{
     }
     h2 {
         font-size: 2rem;
+    }
+}
+
+@media screen and (max-width:500px){
+    .middleText > h1{
+        font-size: 1.2em;
+    }
+    .middleText > span{
+        top: 40px;
+        margin-top: 0;
+    }
+    .middleText > h3{
+        font-size: 0.7em;
+        top: 50px;
+    }
+
+    .cardText > h1{
+        font-size: 1.2em;
+    }
+    .cardText > h3{
+        font-size: 0.7em;
+    }
+    #cardprevious, #cardnext {
+        width: 30px;
+    }
+    #cardprevious{
+        margin: 5px;
+    }
+    #cardnext{
+        margin: 5px;
     }
 }
 @media screen and (max-width:410px){
