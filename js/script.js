@@ -234,3 +234,179 @@ link.href = 'css/scrollbars.css';
 document.head.appendChild(link);
 document.querySelector('#switch').checked = true;
 
+
+
+/*********************** */
+/* Card-Switcher         */
+/*********************** */
+document.getElementById("cardnext").addEventListener("click", function() {
+    cardRight();
+    buttonsWhileSwitching();
+    switchTextRight();
+});
+
+document.getElementById("cardprevious").addEventListener("click", function() {
+    cardleft();
+    buttonsWhileSwitching();
+    switchTextLeft();
+});
+
+
+function cardRight() {
+    //get the the elements
+    var left = document.getElementsByClassName("left");
+    var middle = document.getElementsByClassName("middle");
+    var right = document.getElementsByClassName("right");
+
+    //get the correct elements
+    left = left[0];
+    middle = middle[0];
+    right = right[0];
+
+    //add the z-index to correctly switch the elements
+    right.style.zIndex = 1;
+    middle.style.zIndex = 0;
+    left.style.zIndex = -1;
+
+
+    //change the classes
+    left.classList.remove("left");
+    middle.classList.remove("middle");
+    right.classList.remove("right");
+
+    left.classList.add("right");
+    middle.classList.add("left");
+    right.classList.add("middle");
+}
+
+function cardleft() {
+    //get the the elements
+    var left = document.getElementsByClassName("left");
+    var middle = document.getElementsByClassName("middle");
+    var right = document.getElementsByClassName("right");
+
+    //get the correct elements
+    left = left[0];
+    middle = middle[0];
+    right = right[0];
+    
+
+    //add the z-index to correctly switch the elements
+    left.style.zIndex = 1;
+    right.style.zIndex = 0;
+    middle.style.zIndex = -1;
+
+    //change the classes
+    left.classList.remove("left");
+    middle.classList.remove("middle");
+    right.classList.remove("right");
+    
+    left.classList.add("middle");
+    middle.classList.add("right");
+    right.classList.add("left");
+}
+
+
+function buttonsWhileSwitching(){
+    //make cardnext and cardprevious not clickable
+    document.getElementById("cardnext").style.pointerEvents = "none";
+    document.getElementById("cardprevious").style.pointerEvents = "none";
+
+    //make the svg's temporarily fill = grey
+    document.getElementById("cardnext_svg").style.fill = "grey";
+    document.getElementById("cardprevious_svg").style.fill = "grey";
+
+    //make cardnext and cardprevious clickable after 1 second
+    setTimeout(function(){
+        document.getElementById("cardnext").style.pointerEvents = "auto";
+        document.getElementById("cardprevious").style.pointerEvents = "auto";
+
+        //change the svg's fill back to white
+        document.getElementById("cardnext_svg").style.fill = "white";
+        document.getElementById("cardprevious_svg").style.fill = "white";
+    }, 1400);
+}
+
+function switchTextRight(){
+    //get the text elements
+    var left = document.getElementsByClassName("leftText");
+    var middle = document.getElementsByClassName("middleText");
+    var right = document.getElementsByClassName("rightText");
+
+    //get the correct elements
+    left = left[0];
+    middle = middle[0];
+    right = right[0];
+
+    //change the classes
+    left.classList.remove("leftText");
+    middle.classList.remove("middleText");
+    right.classList.remove("rightText");
+
+    left.classList.add("rightText");
+    middle.classList.add("leftText");
+    right.classList.add("middleText");
+
+    //add the topText class to the middle element to move it up and make it disappear
+    middle.classList.add("topText");
+
+    //after the middle is moved up, remove the topText class and add the bottomText class to make it move down for the next switch
+    setTimeout(function(){
+        middle.classList.remove("topText");
+        middle.classList.add("bottomText");
+    }, 1400);
+
+}
+
+function switchTextLeft(){
+    //get the text elements
+    var left = document.getElementsByClassName("leftText");
+    var middle = document.getElementsByClassName("middleText");
+    var right = document.getElementsByClassName("rightText");
+
+    //get the correct elements
+    left = left[0];
+    middle = middle[0];
+    right = right[0];
+
+    //change the classes
+    left.classList.remove("leftText");
+    middle.classList.remove("middleText");
+    right.classList.remove("rightText");
+
+    left.classList.add("middleText");
+    middle.classList.add("rightText");
+    right.classList.add("leftText");
+
+    //add the topText class to the middle element to move it up and make it disappear
+    middle.classList.add("topText");
+
+    //after the middle is moved up, remove the topText class and add the bottomText class to make it move down for the next switch
+    setTimeout(function(){
+        middle.classList.remove("topText");
+        middle.classList.add("bottomText");
+    }, 1400);
+}
+
+/*if clickableCard is clicked*/
+document.getElementById("clickableCard").addEventListener("click", function() {
+
+    /*check which id=card[i] has class middle*/
+    var card = document.getElementsByClassName("middle");
+    var cardId = card[0].id;
+
+    if(cardId == "card1"){
+        
+    }
+    else if(cardId == "card2"){
+        /*load webprojekt/index*/
+        window.location.href = "webprojekt/index.html";
+    }
+    else if(cardId == "card3"){
+        /*load canvas/index*/
+        window.location.href = "canvas/index.html";
+    }
+
+
+    
+});

@@ -350,9 +350,611 @@ footer{
     width: 100%;
 }
 
+/*****************************************************************
+* 6. Projects | Project-Cards
+*****************************************************************/
+
+/***********************************************/
+/* Textswitch | Text of cards */
+/***********************************************/
+/*****************************************************************
+* 0. Color-Variables
+*****************************************************************/
+:root{
+    --color_Icons: #46a592;
+    --color_Text: #000;
+    --color_Background: #e3f1ff;
+    --color_Highlighted: #f2ffff;
+}
+
+/*****************************************************************
+* 1. General CSS
+*****************************************************************/
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border-style: none;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+html {
+    background-color: var(--color_Background);
+}
+body{
+    max-width: 1000px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%;
+    margin: 0 auto;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    color: var(--color_Highlighted);
+}
+h1{
+    font-size: 4.4rem;
+    font-weight: 700;
+    color: var(--color_Text);
+}
+h2{
+    font-size: 2.6rem;
+    font-weight: 600;
+    color: var(--color_Text);
+}
+h3{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--color_Text);
+}
+
+/*****************************************************************
+* 2. Header
+*****************************************************************/
+header{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.svg{
+    height: 50px;
+    width: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: red;
+}
+svg {
+    color : var(--color_Icons) !important;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    justify-self: center;
+    align-items: center;
+    margin: 25px 0;
+    width: 100%;
+}
+.navigation li{
+    padding-left: 10px;
+    padding-right: 10px; 
+    width: calc((100% - 188px) / 5);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.navigation li:hover{
+    background-color: var(--color_Highlighted);
+    border-radius: 10px;
+}
+.navigation li a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.navigation li a div{
+    display: flex;
+    align-items: center;
+    color: #053742; 
+}
+.navigation li a div h1{
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.navigation li a div svg{
+    margin-right: 5px;
+}
+.seperator{
+    width: 2px;
+    height: 80%;
+    background-color: var(--color_Icons);
+    margin: 0 10px;
+}
+span{
+    user-select: none;
+}
+object {
+    user-select: none;
+}
+
+.skillslist .seperator{
+    margin: 0 10px;
+}
+.seperatorHorizontal{
+    height: 2px;
+    width: 60%;
+    background-color: var(--color_Icons);
+    margin: 50px auto;
+
+}
+
+/*****************************************************************
+* 3. Main
+*****************************************************************/
+main{
+    display: flex;
+    flex-direction: column;
+}
+main div{
+    display: flex;
+    flex-direction: column;
+}
+main span{
+    margin-right: 20px;
+}
+main h1{
+    font-size: 2.1rem;
+}
+main div .title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+}
+main div .text{
+    padding-left: 20px;
+    padding-right: 30px;
+}
+main div .text ul{
+    display: flex;
+    flex-direction: row;
+}
+main div .text ul li a div{
+    display: flex;
+    flex-direction: row;
+}
+.skillslist{
+    align-items: center;
+    flex-wrap: wrap;
+}
+.skillslist ul{
+    width: 100%;
+    justify-content: center;
+    height: 60px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.skillslist ul:last-child{
+    margin-bottom: 0px;
+}
+.skillslist ul li{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+.skillslist ul li:hover{
+    background-color: var(--color_Highlighted);
+    border-radius: 10px;
+}
+.skillslist ul li a{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.skillslist ul li a div{
+    padding: 5px;
+}
+.skillslist span{
+    margin: 0;
+}
+.skillsTitle{
+    margin-left: 20px;
+}
+#welcome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#welcome h1{
+    line-height: 90%;
+    font-size: 4rem;
+}
+#welcome h2{
+    line-height: 95%;
+}
+.underline{
+    text-decoration: underline;
+    color: var(--color_Text);
+}
+.projectContainer{
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.projectContainer:last-child{
+    margin-bottom: 0px;
+}
+.projectLink{
+    display: flex;
+    text-align: center;
+    height: 200px;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    border-left: 2px solid var(--color_Icons);
+    border-right: 2px solid var(--color_Icons);
+}
+.projectLink:hover{
+    background-color: var(--color_Highlighted);
+    
+}
+.svgOst{
+    height: 100%;
+    width: 200px;
+    background-position: center;
+    margin-right: 30px;
+    margin-left: 20px;
+}
+
+
+/*****************************************************************
+* 4. Footer
+*****************************************************************/
+footer{
+    height: 100px;
+}
+
+
+/*****************************************************************
+* 5. Settings-Tab
+*****************************************************************/
+#settings {
+    left: -10px;
+    top: -100%;
+    transition: top 0.3s ease-in-out;
+    user-select: none;
+}
+  
+.open {
+    top: 0 !important;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(114, 114, 114, 0.4);
+    position: fixed;
+}
+  
+#inner_settings{
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+    padding: 50px;
+    background-color: rgba(26, 24, 24, 1);
+}
+#inner_settings label{
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: max-content;
+    align-items: center;
+}
+#inner_settings label h4{
+    padding-right: 10px;
+    color: white;
+}
+ .toggle {
+    position : relative ;
+    display : inline-block;
+    width :60px !important;
+    height : 30px !important;
+    padding: 0 !important;
+    background-color: #ccc;
+    border-radius: 30px;
+    border: 2px solid rgb(80, 80, 80);
+}
+.toggle:after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    left: 3px;
+    transition: left 0.5s;
+}
+.checkbox:checked + .toggle::after {
+    left : calc(60px - 30px - 1px)
+}
+.checkbox:checked + .toggle {
+    background-color: #2196F3;
+}
+.checkbox {
+    display : none;
+}
+#ver2, #reset, #ver2_de, #reset_de{
+    color: #fff;
+}
+
+.language_selector{
+    height: 30px;
+    width: 70px;
+    display: flex;
+}
+.language_selector svg{
+    height: 100%;
+    width: 100%;
+}
+
 
 /*****************************************************************
 * 6. Media Queries
+*****************************************************************/
+
+@media screen and (max-width:1000px){
+    .headerTitle, .skillsTitle{
+        display: none;
+    }
+}
+
+@media screen and (max-width:900px){
+    .svgOst{
+        display: none;
+    }
+    .projectLink{
+        justify-content: center;
+    }
+}
+
+
+
+/* additional changes :) */
+.invisible{
+    display: none;
+}
+
+
+
+
+
+
+/***********************************************/
+/* Project-cards */
+/***********************************************/
+
+
+/*Buttons to switch cards*/
+#cardsButtons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 20px;
+    flex-direction: row;
+    z-index: 100;
+}
+
+#cardnext, #cardprevious{
+    width: 50px;
+    height: 80px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 55px;
+}
+
+#cardnext:hover, #cardprevious:hover{
+    cursor: pointer;
+}
+
+#cardnext > svg, #cardprevious > svg{
+    height: 90%;
+    width: 90%;
+    fill: white;
+}
+
+
+
+/*general card and container*/
+#projectsCardContainer{
+    width: 100%;
+    height: calc(330px * 1.6);
+}
+
+.card{
+    height: calc(330px * 1.6);
+    width: calc(1000px / 3);
+    position: absolute;
+}
+
+#clickableCard{
+    height: calc(330px * 1.6);
+    width: calc(1000px / 3);
+    position: absolute;
+    left: calc(50% - (1000px / 6));
+    z-index: 100;
+}
+#clickableCard:hover{
+    cursor: pointer;
+}
+
+/*Background-settings*/
+#projectsCardContainer > div > div{
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 10px;
+}
+#card1 > div{
+    background-image: url(../images/ost.jpg);
+}
+#card2 > div{
+    background-image: url(../images/projectOstCard.png);
+}
+#card3 > div{
+    background-image: url(../images/bwzCard.png); 
+}
+
+
+/*place the card at the right position and make it look 3d*/
+.left{
+    left: calc(50% - (1000px / 2));
+    transform: perspective(800px) rotateY(30deg);
+}
+.middle{
+    left: calc(50% - (1000px / 6));
+}
+.right{
+    left: calc(50% + (1000px / 6));
+    transform: perspective(800px) rotateY(-30deg);
+}
+
+
+/*place the inner of the cards right*/
+.middle > div{
+    width: 100%;
+    height: 100%;
+}
+
+.right > div, .left > div{
+    width: 85%;
+    height: 85%;
+    margin-top: 15%;
+
+    filter: brightness(0.5);
+}
+
+.left > div{
+    margin-left: 15%;
+}
+
+.right > div{
+    margin-left: 0%;
+}
+
+
+
+/*set transitions of cards*/
+#projectsCardContainer > div, .card > div{
+    transition: 0.8s ease;
+}
+
+
+.middle:hover{
+    cursor: pointer;
+}
+
+
+/***********************************************/
+/* Textswitch | Text of cards */
+/***********************************************/
+.cardText{
+    position: relative;
+    left: 27%;
+    top: -50%;
+    z-index: 100;
+    max-width: 400px;
+}
+
+/*transition for the Textswitch*/
+.cardText > *{
+    position: absolute;
+    transition: 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/*place text in the middle*/
+.middleText > h1{
+    top: 0px !important;
+    opacity: 1;
+    transition-delay: 0.8s;
+}
+.middleText > span{
+    top: 65px;
+    opacity: 1;
+    transition-delay: 1s;
+}
+.middleText > h3{
+    top: 76px;
+    opacity: 1;
+    transition-delay: 1.2s;
+}
+
+/*the place the text moves down to*/
+.bottomText > *{
+    top: 200px;
+    opacity: 0;
+}
+
+/*the place the text moves up to*/
+.topText > h1{
+    top: -100px;
+    opacity: 0;
+    transition-delay: 0s;
+}
+.topText > span{
+    top: -60px;
+    opacity: 0;
+    transition-delay: 0.13s;
+}
+.topText > h3{
+    top: -60px;
+    opacity: 0;
+    transition-delay: 0.3s;
+}
+
+
+/*Schriftart / grösse*/
+.cardText > h1, .cardText > h3{
+    font-size: 3em;
+    font-family: "Franklin Gothic Medium";
+    letter-spacing: 10%;
+    text-shadow: 0px 0px 4px rgb(0, 0, 0);
+
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+}
+.cardText > h3{
+    font-size: 1.6em;
+}
+.cardText > span{/*horizontal line*/
+    display: block;
+    width: 10%;
+    height: 2px;
+    box-shadow: 0px 0px 4px rgb(0, 0, 0);
+    margin-bottom: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+/*****************************************************************
+* 7. Media Queries
 *****************************************************************/
 
 @media screen and (max-width:1000px){
@@ -389,11 +991,6 @@ footer{
         font-size: 1.1em;
     }
 }
-    
-
-
-
-
 
 
 /* additional changes :) */
