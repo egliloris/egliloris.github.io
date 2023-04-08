@@ -299,7 +299,7 @@ footer > h4{
     margin-bottom: 10px;
 }
 .gitLink{
-    color: #000;
+    color: var(--color_Text);
     text-decoration: underline;
 }
 /*****************************************************************
