@@ -326,6 +326,7 @@ footer > h4{
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     border-radius: 20px;
 
     display: flex;
@@ -476,6 +477,7 @@ footer > h4{
 .left{
     left: calc(50% - (1000px / 2));
     -webkit-transform: perspective(800px) rotateY(30deg);
+    transform: perspective(800px) rotateY(30deg);
 }
 .middle{
     left: calc(50% - (1000px / 6));
@@ -483,6 +485,7 @@ footer > h4{
 .right{
     left: calc(50% + (1000px / 6));
     -webkit-transform: perspective(800px) rotateY(-30deg);
+    transform: perspective(800px) rotateY(-30deg);
 }
 
 
