@@ -325,7 +325,7 @@ footer > h4{
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
     border-radius: 20px;
 
     display: flex;
@@ -475,14 +475,14 @@ footer > h4{
 /*place the card at the right position and make it look 3d*/
 .left{
     left: calc(50% - (1000px / 2));
-    transform: perspective(800px) rotateY(30deg);
+    -webkit-transform: perspective(800px) rotateY(30deg);
 }
 .middle{
     left: calc(50% - (1000px / 6));
 }
 .right{
     left: calc(50% + (1000px / 6));
-    transform: perspective(800px) rotateY(-30deg);
+    -webkit-transform: perspective(800px) rotateY(-30deg);
 }
 
 
